@@ -1,4 +1,6 @@
-# Bash Cheat Sheet
+# Bash Cheat Sheet  
+![Bash](https://img.shields.io/badge/Bash-%2312100E.svg?style=flat-square&logo=gnu-bash&logoColor=white)
+
 
 ## Navegación de Directorios
 - `pwd` – Muestra la ruta actual.
@@ -59,8 +61,18 @@
   - Ejemplo: `alias ll='ls -la'`
 - `unalias nombre` – Elimina un alias.
 
-## Permisos
+## Comandos Útiles
+- `echo <texto>` – Muestra texto en la terminal.
+- `date` – Muestra la fecha y hora actual.
+- `clear` – Limpia la terminal.
+- `history` – Muestra el historial de comandos ejecutados.
+- `whoami` – Muestra el usuario actual.
+- `uname -a` – Muestra información del sistema.
+- `df -h` – Muestra el uso de disco en el sistema.
+- `du -h <archivo/directorio>` – Muestra el tamaño de un archivo o directorio.
+- `uptime` – Muestra el tiempo que el sistema ha estado activo.
 
+## Permisos
 - `chmod <permisos> <archivo>` – Cambia los permisos de un archivo.
   - Ejemplos:
     - `chmod 755 <archivo>` – Permisos de lectura, escritura y ejecución para el propietario; lectura y ejecución para otros.
@@ -84,30 +96,6 @@
     - `umask 077` – Nuevos archivos y directorios solo tendrán permisos para el propietario.
   - Nota: La umask resta permisos; por ejemplo, una umask de `022` evita que otros tengan permisos de escritura.
 
-
-
-
-
-
-## Gestión de Procesos
-- `ps` – Muestra una lista de procesos en ejecución.
-- `top` – Muestra una lista dinámica de procesos con uso de recursos.
-- `kill <PID>` – Termina un proceso con el ID proporcionado.
-- `killall <nombre_proceso>` – Termina todos los procesos con el nombre dado.
-
-
-
-## Comandos Útiles
-- `echo <texto>` – Muestra texto en la terminal.
-- `date` – Muestra la fecha y hora actual.
-- `clear` – Limpia la terminal.
-- `history` – Muestra el historial de comandos ejecutados.
-- `whoami` – Muestra el usuario actual.
-- `uname -a` – Muestra información del sistema.
-- `df -h` – Muestra el uso de disco en el sistema.
-- `du -h <archivo/directorio>` – Muestra el tamaño de un archivo o directorio.
-- `uptime` – Muestra el tiempo que el sistema ha estado activo.
-
 ## Redes
 - `ping <dirección>` – Prueba la conectividad con una dirección (IP o URL).
 - `ifconfig` – Muestra la configuración de red (Linux y Unix).
@@ -118,87 +106,8 @@
 - `scp archivo usuario@host:<ruta>` – Copia un archivo de forma segura a otro equipo.
 - `netstat -tuln` – Muestra las conexiones de red activas y puertos en uso.
 
-
-
-
-
-# Programación Estructurada en Bash
-
-### Secuenciales
-Son instrucciones que se ejecutan una tras otra en el orden en que aparecen. 
-
-Ejemplo:
-```bash
-echo "Comenzando script"
-mkdir nuevo_directorio
-echo "Directorio creado"
-
-
-## Variables
-- `VARIABLE=valor` – Define una variable.
-- `$VARIABLE` – Accede al valor de una variable.
-- `export VARIABLE=valor` – Define una variable de entorno.
-
-
-
-## Estructuras de Control
-- **Condicionales**:
-  ```bash
-  if [ condición ]; then
-      # comandos
-  elif [ condición ]; then
-      # comandos alternativos
-  else
-      # comandos alternativos
-  fi
-
-
-
-  # Estructuras de Programación en Bash
-
-```bash
-# Secuenciales: Las instrucciones se ejecutan una tras otra en el orden en que aparecen.
-echo "Comenzando script"
-mkdir nuevo_directorio
-echo "Directorio creado"
-
-# Condicional if: Permite ejecutar comandos si se cumple una condición.
-if [ -f archivo.txt ]; then
-    echo "El archivo existe."
-else
-    echo "El archivo no existe."
-fi
-
-# Condicional case: Permite ejecutar diferentes bloques de código según el valor de una variable.
-read -p "Elige una opción (a/b): " opcion
-case $opcion in
-    "a")
-        echo "Elegiste A"
-        ;;
-    "b")
-        echo "Elegiste B"
-        ;;
-    *)
-        echo "Opción no válida"
-        ;;
-esac
-
-# Bucle for: Ejecuta un conjunto de comandos repetidamente para cada valor en una lista o rango.
-for i in {1..5}; do
-    echo "Iteración $i"
-done
-
-# Bucle while: Ejecuta un conjunto de comandos mientras una condición sea verdadera.
-contador=1
-while [ $contador -le 5 ]; do
-    echo "Contador: $contador"
-    contador=$((contador + 1))
-done
-
-# Funciones: Permiten definir bloques de código reutilizables.
-saludar() {
-    echo "Hola, $1"
-}
-
-saludar "Mundo"
-
+## Gestión de Procesos
+- `ps` – Muestra una lista de procesos en ejecución.
+- `top` – Muestra una lista dinámica de procesos con uso de recursos.
+- `kill <PID>` – Termina un proceso con el ID proporcionado.
+- `killall <nombre_proceso>` – Termina todos los procesos con el nombre dado.

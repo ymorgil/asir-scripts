@@ -9,7 +9,7 @@
     5. [Estructura iterativa bucle `until`](#estructura-iterativa-bucle-until) 
 3. [Funciones en Bash](#funciones-en-bash)
 
-<br><br><br>
+<br><br>
 
 # Comandos  
 
@@ -123,10 +123,10 @@
 - `kill <PID>` – Termina un proceso con el ID proporcionado.
 - `killall <nombre_proceso>` – Termina todos los procesos con el nombre dado.
 
-<br><br><br>
+<br><br>
+
 
 # Programación Estructurada en Bash
-
 ## Variables en Bash
 Las variables en Bash se utilizan para almacenar información que se puede utilizar más adelante en el script. No es necesario declarar el tipo de una variable, solo se asigna un valor.
 - `VARIABLE=valor` – Define una variable.
@@ -291,10 +291,9 @@ done
 ```
 Este bucle continuará ejecutándose hasta que la condición se haga verdadera (cuando el contador sea mayor que 3)
 
-<br><br><br>
+<br><br>
 
 # Funciones en Bash
-
 Las funciones en Bash permiten agrupar un conjunto de comandos bajo un mismo nombre para poder reutilizarlos en diferentes partes de un script. Esto ayuda a organizar el código, evitar repeticiones y facilitar su mantenimiento.
 
 ## Definición de una función

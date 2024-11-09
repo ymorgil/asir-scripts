@@ -24,7 +24,7 @@ echo "Directorio creado"
 
 ## Estructuras de Control
 
-### 1. Estructura Condicional `if`
+>### <span style="color:#00adef;">1. Estructura Condicional `if` </span >
 
 La estructura `if` permite ejecutar un bloque de comandos si se cumple una condición. Para esa condición se sueles usar:
 1. Simples corchetes [ ... ]:
@@ -36,6 +36,7 @@ La estructura `if` permite ejecutar un bloque de comandos si se cumple una condi
    - Permiten el uso de operadores lógicos más avanzados, como &&, || y !.
    - Son más tolerantes con las cadenas que contienen espacios, ya que no requieren que las variables se citen explícitamente en muchos casos.
    - Soportan comparaciones de cadenas con patrones, como == y !=, y permiten el uso de comodines (*, ?).
+
 #### Sintaxis:
 ```bash
 if [[ condición ]]; then
@@ -44,7 +45,6 @@ else
     # comandos si la condición es falsa
 fi
 ```
-
 ```bash
   if [ condición ]; then
       # comandos
@@ -55,7 +55,7 @@ fi
   fi
 ```
 
-
+#### Ejemplo:
 ```bash
 numero=10
 if [ $numero -gt 5 ]; then
@@ -64,12 +64,26 @@ else
     echo "El número es menor o igual que 5"
 fi
 ```
+>### <span style="color:#00adef;">  2. Estructura Condicional `case` </span>
+El case se utiliza cuando se desea evaluar múltiples opciones posibles para una variable. Es útil cuando se tienen muchas condiciones que verificar.
 
-
-# Estructuras de Programación en Bash
-
+#### Sintaxis:
 ```bash
-# Condicional case: Permite ejecutar diferentes bloques de código según el valor de una variable.
+case $variable in
+    valor1)
+        # comandos si la variable es igual a valor1
+        ;;
+    valor2)
+        # comandos si la variable es igual a valor2
+        ;;
+    *)
+        # comandos si ninguna opción coincide
+        ;;
+esac
+```
+
+#### Ejemplo:
+```bash
 read -p "Elige una opción (a/b): " opcion
 case $opcion in
     "a")
@@ -82,24 +96,72 @@ case $opcion in
         echo "Opción no válida"
         ;;
 esac
+``` 
+En este ejemplo, dependiendo del valor de opcion, se ejecuta un bloque de código específico.
 
-# Bucle for: Ejecuta un conjunto de comandos repetidamente para cada valor en una lista o rango.
+>### <span style="color:#00adef;">  3. Estructura iterativa (bucle) `for` </span>
+El bucle for ejecuta un conjunto de comandos un número **determinado** de veces.
+#### Sintaxis:
+```bash
+for variable in {inicio..fin}; do
+    # comandos
+done
+```
+
+#### Ejemplo:
+```bash
 for i in {1..5}; do
     echo "Iteración $i"
 done
+```
+Este bucle imprimirá "Iteración 1", "Iteración 2", hasta "Iteración 5".
 
-# Bucle while: Ejecuta un conjunto de comandos mientras una condición sea verdadera.
+>### <span style="color:#00adef;">  4. Estructura iterativa (bucle) `while` </span>
+El bucle while repite un conjunto de comandos mientras se cumpla una condición.
+#### Sintaxis:
+```bash
+while [ condición ]; do
+    # comandos
+done
+```
+
+#### Ejemplo:
+```bash
 contador=1
-while [ $contador -le 5 ]; do
+while [ $contador -le 3 ]; do
     echo "Contador: $contador"
     contador=$((contador + 1))
 done
-
-# Funciones: Permiten definir bloques de código reutilizables.
-saludar() {
-    echo "Hola, $1"
-}
-
-saludar "Mundo"
-
 ```
+Este bucle seguirá ejecutándose mientras la condición sea verdadera. En este caso, imprimirá los valores del contador del 1 al 3.
+
+>#### <span style="color:#aaee88;"> Lectura de ficheros </span>
+El bucle while es comúnmente utilizado para leer archivos línea por línea, especialmente cuando no sabes cuántas líneas tiene el archivo o cuando necesitas realizar operaciones dinámicas en cada línea.
+- Recuerda usar `IFS` y `-r` para una lectura más robusta si las líneas contienen espacios o caracteres especiales.
+```bash
+while IFS= read -r linea; do
+    echo "Línea: $linea"
+done < archivo.txt
+```
+
+>### <span style="color:#00adef;">  5. Estructura iterativa (bucle) `until` </span>
+El bucle until es similar al while, pero en lugar de ejecutar el bloque de comandos mientras la condición sea verdadera, lo hace mientras la condición sea falsa.
+
+#### Sintaxis:
+```bash
+until [ condición ]; do
+    # comandos
+done
+```
+
+#### Ejemplo:
+```bash
+contador=1
+until [ $contador -gt 3 ]; do
+    echo "Contador: $contador"
+    contador=$((contador + 1))
+done
+```
+Este bucle continuará ejecutándose hasta que la condición se haga verdadera (cuando el contador sea mayor que 3)
+
+
