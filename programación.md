@@ -1,5 +1,11 @@
 # Programación Estructurada en Bash
 
+1. [Estructura Condicional `if`](#estructura-condicional-if) 
+2. [Estructura Condicional `case`](#estructura-condicional-case) 
+3. [Estructura iterativa bucle `for`](#estructura-iterativa-bucle-for) 
+4. [Estructura iterativa bucle `while`](#estructura-iterativa-bucle-while) 
+5. [Estructura iterativa bucle `until`](#estructura-iterativa-bucle-until) 
+
 ## Variables en Bash
 Las variables en Bash se utilizan para almacenar información que se puede utilizar más adelante en el script. No es necesario declarar el tipo de una variable, solo se asigna un valor.
 - `VARIABLE=valor` – Define una variable.
