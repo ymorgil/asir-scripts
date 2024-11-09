@@ -24,7 +24,7 @@ echo "Directorio creado"
 
 ## Estructuras de Control
 
->### <span style="color:#00adef;">1. Estructura Condicional `if` </span >
+>### <span style="color:#00adef;">Estructura Condicional `if` </span >
 
 La estructura `if` permite ejecutar un bloque de comandos si se cumple una condición. Para esa condición se sueles usar:
 1. Simples corchetes [ ... ]:
@@ -64,7 +64,7 @@ else
     echo "El número es menor o igual que 5"
 fi
 ```
->### <span style="color:#00adef;">  2. Estructura Condicional `case` </span>
+>### <span style="color:#00adef;">Estructura Condicional `case` </span>
 El case se utiliza cuando se desea evaluar múltiples opciones posibles para una variable. Es útil cuando se tienen muchas condiciones que verificar.
 
 #### Sintaxis:
@@ -99,7 +99,7 @@ esac
 ``` 
 En este ejemplo, dependiendo del valor de opcion, se ejecuta un bloque de código específico.
 
->### <span style="color:#00adef;">  3. Estructura iterativa (bucle) `for` </span>
+>### <span style="color:#00adef;">Estructura iterativa (bucle) `for` </span>
 El bucle for ejecuta un conjunto de comandos un número **determinado** de veces.
 #### Sintaxis:
 ```bash
@@ -116,7 +116,7 @@ done
 ```
 Este bucle imprimirá "Iteración 1", "Iteración 2", hasta "Iteración 5".
 
->### <span style="color:#00adef;">  4. Estructura iterativa (bucle) `while` </span>
+>### <span style="color:#00adef;">Estructura iterativa (bucle) `while` </span>
 El bucle while repite un conjunto de comandos mientras se cumpla una condición.
 #### Sintaxis:
 ```bash
@@ -144,7 +144,7 @@ while IFS= read -r linea; do
 done < archivo.txt
 ```
 
->### <span style="color:#00adef;">  5. Estructura iterativa (bucle) `until` </span>
+>### <span style="color:#00adef;">Estructura iterativa (bucle) `until` </span>
 El bucle until es similar al while, pero en lugar de ejecutar el bloque de comandos mientras la condición sea verdadera, lo hace mientras la condición sea falsa.
 
 #### Sintaxis:
