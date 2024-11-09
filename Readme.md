@@ -2,10 +2,5 @@
 
 1. [Comandos](comandos.md#comandos)
 2. [Programación Estructurada en Bash](programación.md#programación-estructurada-en-bash)
-    1. [Estructura Condicional `if`](programación.md#estructura-condicional-if) 
-    2. [Estructura Condicional `case`](programación.md#estructura-condicional-case) 
-    3. [Estructura iterativa bucle `for`](programación.md#estructura-iterativa-bucle-for) 
-    4. [Estructura iterativa bucle `while`](programación.md#estructura-iterativa-bucle-while) 
-    5. [Estructura iterativa bucle `until`](programación.md#estructura-iterativa-bucle-until) 
 3. [Funciones en Bash](funciones.md#funciones-en-bash)
 4. [Wildcards en Bash](wildcards.md#wildcards-en-bash)
