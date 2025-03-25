@@ -1,4 +1,4 @@
-# Resumen de BASH   ![Bash](https://img.shields.io/badge/Bash-%2312100E.svg?style=flat-square&logo=gnu-bash&logoColor=white)
+# Resumen de BASH 2 ![Bash](https://img.shields.io/badge/Bash-%2312100E.svg?style=flat-square&logo=gnu-bash&logoColor=white)
 
 1. [Comandos](docs/Comandos.md#comandos)
 2. [Programación Estructurada en Bash](docs/programación.md#programación-estructurada-en-bash)
