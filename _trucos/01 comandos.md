@@ -42,7 +42,7 @@
   - Ejemplos:
     - `awk '{print $1}' archivo.txt` – Imprime la primera columna de cada línea en el archivo.
     - `awk '/patrón/ {print $0}' archivo.txt` – Imprime líneas que contienen el "patrón" en el archivo.
-    - `awk -F, '{print $2}' archivo.csv` – Usa `,` como delimitador e imprime la segunda columna en un archivo CSV.
+    - `Pawk -F, '{print $2}' archivo.csv` – Usa `,` como delimitador e imprime la segunda columna en un archivo CSV.
 
 - `cut` – Extrae secciones de cada línea de un archivo o entrada estándar.
   - Ejemplos:
